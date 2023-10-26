@@ -21,36 +21,24 @@ import java.util.Scanner;
 
 public class exercicio15pag1 {
     public static void main(String[] args) {
-        // Crie um Scanner para obter a entrada do usuário
-        Scanner scanner = new Scanner(System.in);
+       Scanner teclado  = new Scanner(System.in);
 
-        // Solicite ao usuário que insira o valor do salário por hora
-        System.out.print("Informe o valor do salário por hora: R$ ");
-        double salarioPorHora = scanner.nextDouble();
+        System.out.print("Informe o valor do salário por hora: ");
+        double salarioPorHora = teclado.nextDouble();
 
-        // Solicite ao usuário que insira o número de horas trabalhadas no mês
         System.out.print("Informe o número de horas trabalhadas no mês: ");
-        double horasTrabalhadas = scanner.nextDouble();
+        double horasTrabalhadas = teclado.nextDouble();
 
-        // Feche o Scanner após a leitura
-        scanner.close();
-
-        // Calcule o salário bruto
         double salarioBruto = salarioPorHora * horasTrabalhadas;
 
-        // Calcule o valor do desconto de IR (11%)
         double descontoIR = salarioBruto * 0.11;
 
-        // Calcule o valor do desconto de INSS (8%)
         double descontoINSS = salarioBruto * 0.08;
 
-        // Calcule o valor do desconto para o sindicato (5%)
         double descontoSindicato = salarioBruto * 0.05;
 
-        // Calcule o salário líquido
         double salarioLiquido = salarioBruto - descontoIR - descontoINSS - descontoSindicato;
 
-        // Exiba os resultados
         System.out.println("+ Salário Bruto : R$ " + salarioBruto);
         System.out.println("- IR (11%) : R$ " + descontoIR);
         System.out.println("- INSS (8%) : R$ " + descontoINSS);
