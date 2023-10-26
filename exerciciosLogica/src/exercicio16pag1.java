@@ -9,22 +9,22 @@ import java.util.Scanner;
 
 public class exercicio16pag1 {
     public static void main(String[] args) {
-        // Crie um Scanner para obter a entrada do usuário
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
-        // Solicite ao usuário que insira o tamanho em metros quadrados da área a ser pintada
-        System.out.print("Digite o tamanho da área a ser pintada (em metros quadrados): ");
-        double areaParaPintar = scanner.nextDouble();
+        System.out.print("Digite o tamanho da área a ser pintada em metros quadrados:");
+        double areaQueSeraPintada = teclado.nextDouble();
 
-        // Calcule a quantidade de latas de tinta necessárias
-        double litrosNecessarios = areaParaPintar / 3.0;
-        int latasNecessarias = (int) Math.ceil(litrosNecessarios / 18.0); // Arredonda para cima
+        double litrosNecessarios = areaQueSeraPintada / 3.0;
+        int latasNecessarias = (int) Math.round(litrosNecessarios / 18.0);
 
-        // Calcule o preço total das latas de tinta
-        double precoPorLata = 80.0;
+        double precoPorLata;
+        precoPorLata = 80.0;
         double precoTotal = latasNecessarias * precoPorLata;
 
-        // Exiba os resultados
+        System.out.println("Quantidade de latas de tinta necessárias: " + latasNecessarias);
+        System.out.println("Preço total: R$ " + precoTotal);
+    }
+}
         System.out.println("Quantidade de latas de tinta necessárias: " + latasNecessarias);
         System.out.println("Preço total: R$ " + precoTotal);
     }
