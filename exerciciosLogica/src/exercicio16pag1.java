@@ -25,7 +25,4 @@ public class exercicio16pag1 {
         System.out.println("Preço total: R$ " + precoTotal);
     }
 }
-        System.out.println("Quantidade de latas de tinta necessárias: " + latasNecessarias);
-        System.out.println("Preço total: R$ " + precoTotal);
-    }
-}
+      
